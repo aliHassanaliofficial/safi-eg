@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Cairo", sans-serif;
@@ -51,25 +55,6 @@ body {
     display: none;
 }
 
-.sticky {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    background-color: #8181815c !important;
-    -webkit-backdrop-filter: saturate(180%) blur(11px);
-    -moz-backdrop-filter: saturate(180%) blur(11px);
-    backdrop-filter: saturate(180%) blur(14px);
-    z-index: 10000;
-    padding: 13px;
-    transition: 0.3s all;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-    height: 15%;
-}
-
-.sticky+.content {
-    padding-top: 102px;
-}
-
 .loading {
     background: #fff !important;
 }
@@ -113,8 +98,12 @@ body {
     background: url('../assets/static/northCoast_404.jpg') no-repeat center;
     background-size: cover;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: center bottom;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -152,147 +141,6 @@ body {
 }
 
 
-@media only screen and (max-width: 767px) {
-    .notfound .notfound-404 {
-        height: 142px;
-    }
-
-    .notfound .notfound-404 h1 {
-        font-size: 112px;
-    }
-}
-
-/*end of main rules*/
-/* section-onload*/
-
-.section-onload {
-    background: url(northCoast.jpg);
-    background-color: #00000024;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-    width: 100%;
-    height: 100vh;
-    transition: all 500ms ease-in-out;
-    animation: darkenBackground 4s both;
-}
-
-.logo {
-    width: 30%;
-    margin-top: 15px;
-}
-
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.form-section {
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.special-user-credit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.user-picture-area {
-    text-align: center;
-}
-
-.user-picture-area img {
-    width: 190px;
-    height: 190px;
-    border-radius: 100%;
-    padding: 5px;
-    background-image: linear-gradient(to right, #00dbde 20%, #fc00ff 100%);
-}
-
-.user-name h1 {
-    margin-top: 7px !important;
-    margin-bottom: 0px;
-    font-size: 20px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--main-color);
-}
-
-.account-username h3 {
-    font-size: 15px;
-    font-weight: lighter;
-    color: lightgray;
-}
-
-.form-sector {
-    margin: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.form-sector form {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.form-sector form label {
-    text-align: start;
-    width: 90%;
-    margin-left: 30px;
-    font-weight: bold;
-}
-
-.form-sector form input {
-    margin: 0px 20px 20px 20px;
-    width: 90%;
-    padding: 10px 5px;
-    border-radius: 7px;
-    border: 1px solid lightgray;
-}
-
-.special-container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.special-logo {
-    margin: 0 !important;
-}
-
-.header-pic {
-    width: 50px !important;
-    height: 50px !important;
-    padding: 2px !important;
-}
-
-#mainHeader {
-    height: 0px;
-    opacity: 0;
-    transition: var(--transition);
-
-}
-
 .sticky {
     opacity: 1 !important;
     position: fixed;
@@ -313,60 +161,176 @@ body {
     padding-top: 102px;
 }
 
-.rating-box {
-    display: flex;
-    flex-direction: row;
-    margin: 15px;
-}
+/*end of main rules*/
 
-.rating-card {
-    background: #efefef;
-    color: black;
-    margin: 0px 10px;
-    padding: 10px 15px;
-    border-radius: 7px;
-    font-weight: bold;
-    transition: var(--transition);
-    cursor: pointer;
-}
+/* section-onload*/
 
-.rating-card:hover {
-    background: #02093e;
-    color: white;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.question-area {
-    font-weight: bold;
-}
-
-footer {
+.header {
     width: 100%;
-    position: fixed;
-    top: calc(100% - 50px);
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    z-index: 9999;
 }
 
-.footer-container {
+.header .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.footer-container a {
-    margin: 0px 5px;
+.logo {
+    width: 50%;
+    margin-top: 15px;
 }
 
-a.copyrighted-slogan {
-    color: inherit;
-    &:hover {
-        color: inherit;
-        text-decoration: none;
-        cursor: default;
+.section-onload {
+    position: absolute;
+    top: 0;
+    background: url(./../assets/static/Marina-photo.jpeg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.blending-layer {
+    width: 100%;
+    height: 100vh;
+    transition: all 500ms ease-in-out;
+    animation: darkenBackground 3s both;
+}
+
+@keyframes darkenBackground {
+    from {
+        background-color: black;
+        opacity: 0%;
+    }
+    
+    to {
+        background-color: black;
+        opacity: 55%;
     }
 }
 
-a.copyrighted-slogan:hover {}
+.landing-area {
+    position: absolute;
+    top: 0;
+    margin: 0% 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.landing-area .child-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+}
+
+.landing-area .child-1 .special-slogan {
+    font-family: "Bowlby One", sans-serif;
+    font-size: 35px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    animation: vibrAnimate2 2s linear 0s 1 normal both;
+} 
+
+.landing-area .child-2{
+    width: 110%;
+} 
+
+.landing-area .child-2 img{
+    width: 100%;
+    animation: vibrAnimate 3s linear 0s infinite normal both;
+} 
+
+@keyframes vibrAnimate {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	60% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes vibrAnimate2 {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateX(-68px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateX(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateX(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+}
+
+/* contact page */
+
+/* .contact-field {
+    background-color: #02044a;
+    width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    } */
