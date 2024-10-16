@@ -185,11 +185,15 @@ footer {
     font-size: 13px;
 }
 
+.footer-container a:hover {
+    color: rgba(255, 255, 255, 0.616);
+}
+
 a.copyrighted-slogan {
     color: white;
 
     &:hover {
-        color: inherit;
+        color: rgba(255, 255, 255, 0.616);;
         text-decoration: none;
         cursor: default;
     }
@@ -241,7 +245,7 @@ a.copyrighted-slogan {
         background-color: black;
         opacity: 0%;
     }
-    
+
     to {
         background-color: black;
         opacity: 55%;
@@ -277,86 +281,86 @@ a.copyrighted-slogan {
     text-transform: uppercase;
     margin: 15px 0px;
     animation: vibrAnimate2 2s linear 0s 1 normal both;
-} 
+}
 
-.landing-area .child-2{
+.landing-area .child-2 {
     width: 110%;
-} 
+}
 
-.landing-area .child-2 img{
+.landing-area .child-2 img {
     width: 100%;
     padding: 15px;
     animation: vibrAnimate 3s linear 0s infinite normal both;
-} 
+}
 
 @keyframes vibrAnimate {
-	0% {
-		transform: translate(0);
-	}
+    0% {
+        transform: translate(0);
+    }
 
-	20% {
-		transform: translate(2px, -2px);
-	}
+    20% {
+        transform: translate(2px, -2px);
+    }
 
-	40% {
-		transform: translate(2px, 2px);
-	}
+    40% {
+        transform: translate(2px, 2px);
+    }
 
-	60% {
-		transform: translate(-2px, 2px);
-	}
+    60% {
+        transform: translate(-2px, 2px);
+    }
 
-	80% {
-		transform: translate(-2px, -2px);
-	}
+    80% {
+        transform: translate(-2px, -2px);
+    }
 
-	100% {
-		transform: translate(0);
-	}
+    100% {
+        transform: translate(0);
+    }
 }
 
 @keyframes vibrAnimate2 {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateX(-250px);
-	}
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateX(-250px);
+    }
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateX(0);
-	}
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0);
+    }
 
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateX(-68px);
-	}
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateX(-68px);
+    }
 
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateX(0);
-	}
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateX(0);
+    }
 
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateX(-28px);
-	}
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateX(-28px);
+    }
 
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateX(0);
-	}
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateX(0);
+    }
 
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateX(-8px);
-	}
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateX(-8px);
+    }
 
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateX(0);
-	}
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateX(0);
+    }
 }
 
 /* contact page */
