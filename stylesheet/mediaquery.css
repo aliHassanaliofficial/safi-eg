@@ -8,22 +8,46 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1022px) {
+@media (min-width: 500px) and (max-width: 768px) {
+    .landing-area .child-2 {
+        width: 70% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .logo {
-        width: 20% !important;
+        width: 40% !important;
+    }
+
+    .landing-area .child-1 .special-slogan {
+        font-family: "Bowlby One", sans-serif;
+        font-size: 35px !important;
+    }
+
+    .landing-area .child-2 {
+        width: 70% !important;
     }
 }
 
 /*special*/
 
-@media (min-width: 1023px) and (max-width: 1025px) {
+@media (min-width: 1024px) and (max-height: 600px) {
     .logo {
-        width: 10%;
-    }
+        width: 20% !important;
+        }
 
     .user-picture-area img {
         width: 190px;
         height: 190px;
+    }
+
+    .landing-area .child-1 .special-slogan {
+        font-family: "Bowlby One", sans-serif;
+        font-size: 25px !important;
+    }
+
+    .landing-area .child-2 {
+        width: 40% !important;
     }
 }
 
