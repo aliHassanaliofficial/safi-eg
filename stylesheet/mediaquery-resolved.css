@@ -1,0 +1,41 @@
+@media (min-width: 1200px) {
+
+    /*contact page*/
+
+    .contact-field .parent .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .contact-field .parent .container .child-2 form{
+        align-items: flex-start;
+    }
+
+    .contact-field .parent .container .child-2 .mail-box {
+        width: 100%;
+        padding: 80px 60px;
+    }
+
+    .contact-field .parent .container .child-2 .send-button {
+        width: 15%;
+    }
+
+    .contact-field .parent .container .child-1 {
+        width: initial;
+        align-items: flex-start;
+    }
+    
+    .contact-field .parent .container .child-1 h1{
+        font-weight: bold;
+        text-align: start;
+    }
+
+    .contact-field .parent .container .child-2 {
+        width: 40%;
+    }
+
+    /*end contact page*/
+}

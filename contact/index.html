@@ -11,18 +11,11 @@
     <link rel="stylesheet" href="../stylesheet/loader.css">
     <link rel="stylesheet" href="../stylesheet/mediaquery.css">
     <link rel="stylesheet" href="../stylesheet/stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet/mediaquery-resolved.css">
     <!-- fontsMerged_CAIRO -t -googlefonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -46,18 +39,86 @@
 
 
     <div class="data">
+        <div class="background-area"></div>
         <div class="header">
             <div class="container">
-                <img src="../assets/static/logo__black.png" alt="" class="logo">
+                <img src="../assets/static/logo__white.png" alt="" class="logo">
             </div>
         </div>
         <div class="contact-field">
             <div class="parent">
-                <div class="child-1">
-                    
-                </div>
-                <div class="child-2">
-
+                <div class="container">
+                    <div class="child-1">
+                        <div class="contact-header">
+                            <h1>
+                                Get In Touch
+                            </h1>
+                            <p>Fill up form and our technical support team will get back within 24h.</p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="contact-methods">
+                            <div class="phone-us cnct-us">
+                                <i class="fa-solid fa-phone""></i>
+                                <a href="">
+                                    +20 155 859 6516
+                                </a>
+                            </div>
+                            <div class=" email-us cnct-us">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="">
+                                        safi.group.eg@gmail.com
+                                    </a>
+                            </div>
+                            <div class="locate-us cnct-us">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a onclick="viewMaps()" style="cursor: pointer;">
+                                    New Smouha, Alexandria, Egypt
+                                </a>
+                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3412.204776493157!2d29.945416700000003!3d31.2150556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDEyJzU0LjIiTiAyOcKwNTYnNDMuNSJF!5e0!3m2!1sen!2seg!4v1731014814656!5m2!1sen!2seg"
+                                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" class="maps-embed" id="mapsEmbed"></iframe>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="social-media-platforms">
+                            <div class="social-media-handler a-facebook">
+                                <a href="https://www.facebook.com/Group.SAFI" class="social-hyberlink"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="social-media-handler a-instagram">
+                                <a href="https://www.instagram.com/safi.group.eg/" class="social-hyberlink"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
+                            <div class="social-media-handler a-x-twitter">
+                                <a href="https://x.com/safi_eg" class="social-hyberlink"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-2">
+                        <div class="rapid-letter">
+                            <div class="mail-box">
+                                <div class="container">
+                                    <form onsubmit="sendEmail(event)">
+                                        <label for="inputName">Your Name</label>
+                                        <input type="text" placeholder="Your Name" name="Name" id="inputName">
+                                        <label for="inputEmail">Your Email</label>
+                                        <input type="email" placeholder="Email address" name="email" id="inputEmail">
+                                        <label for="mailSubject">Mail Subject</label>
+                                        <input type="text" placeholder="Subject" name="mailSubject" id="mailSubject">
+                                        <label for="messageContent">Message</label>
+                                        <textarea type="text" placeholder="Message" name="messageContent"
+                                            id="messageContent" style="font-size: 1em;"></textarea>
+                                        <input type="submit" value="Send" class="send-button">
+                                        <strong style="color: #33333341;">Powered by: <i>ERA Engines</i></strong>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,6 +129,35 @@
         </footer> -->
     </div>
 
+    <script type="text/javascript">
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Gather form data
+            const name = document.getElementById("inputName").value;
+            const email = document.getElementById("inputEmail").value;
+            const subject = document.getElementById("mailSubject").value;
+            const message = document.getElementById("messageContent").value;
+
+            // Format email content for mailto link
+            const mailtoLink = `mailto:safi.group.eg@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            )}`;
+
+            // Open the user's email client with the formatted mailto link
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+    <script>
+        function viewMaps() {
+            var mapsEmbed = document.getElementById("mapsEmbed");
+                mapsEmbed.classList.add('active');
+        }
+    </script>
+
+    <!-- font awesome import -->
+    <script src="https://kit.fontawesome.com/bcef97855c.js" crossorigin="anonymous"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/loader.js"></script>
     <script src="../js/header.js"></script>

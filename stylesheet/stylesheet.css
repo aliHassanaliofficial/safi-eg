@@ -365,11 +365,194 @@ a.copyrighted-slogan {
 
 /* contact page */
 
-/* .contact-field {
-    background-color: #02044a;
+.background-area {
+    background-color: #02093e;
     width: 100%;
-        height: 100vh;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-    } */
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+}
+
+.contact-field {
+    position: relative;
+}
+
+.contact-field .parent .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact-field .parent .container{
+    color: white;
+}
+
+.contact-field .parent .container .child-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-field .parent .container .child-1 h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+.contact-field .parent .container .child-1 p{
+    font-weight: normal;
+    text-align: center;
+    color: lightgray;
+    margin: 0 0px 20px 0px;
+}
+
+.contact-field .parent .container .child-1 .contact-methods .cnct-us {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    font-size: 19px;
+}
+
+.contact-field .parent .container .child-1 .contact-methods .cnct-us i {
+    font-size: 1.5em;
+    color: #0c75ff;
+    margin-right: 25px;
+}
+
+.contact-field .parent .container .child-1 .contact-methods .cnct-us a {
+    text-decoration: none;
+    color: white;
+    transition: var(--transition);
+    font-size: 1em;
+}
+
+.contact-field .parent .container .child-1 .contact-methods .cnct-us:hover a {
+    color: rgba(255, 255, 255, 0.616);
+    transition: var(--transition);
+}
+
+.social-media-platforms {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0px;
+}
+
+.social-media-platforms .social-media-handler a {
+    font-size: 25px;
+    margin: 0px 10px;
+    color: white;
+    transition: var(--transition);
+}
+
+.social-media-platforms .social-media-handler i {
+    font-size: 25px;
+    margin: 0px 10px;
+    color: white;
+    padding: 15px 20px;
+    transition: var(--transition);
+}
+
+.social-media-platforms .social-media-handler a:hover i{
+    background-color: #0c75ff;
+    border-radius: 1270px;
+    transition: var(--transition);
+}
+
+.contact-field .parent .container .child-2 {
+    width: 90%;
+}
+
+.contact-field .parent .container .child-2 .mail-box{
+    background-color: white;
+    padding: 50px 30px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.contact-field .parent .container .child-2 form{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-field .parent .container .child-2 form label{
+    font-size: 17px;
+    margin: 10px 12px;
+    text-transform: capitalize;
+    color: #004d91;
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 90%;
+}
+
+.contact-field .parent .container .child-2 input:not([type = submit]), textarea {
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: #f7f7f785;
+    color: #004d91;
+    border-inline-width: 1px;
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+    background-color: #ececec66;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 10px 50%;
+    padding-left: 25px;
+    &:focus {
+        border-color: #0c75ff;
+        outline-color: #0c75ff;
+        box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #fff;
+    }
+}
+
+.contact-field .parent .container .child-2 #messageContent {
+    height: 160px;
+    resize: none;
+}
+
+.contact-field .parent .container .child-2 .send-button {
+    margin: 25px 0px;
+    background-color: #0c75ff;
+    border: none;
+    color: white;
+    padding: 15px;
+    width: 40%;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: var(--transition);
+    float: right;
+    font-size: 15px;
+        font-weight: bold;
+    &:hover {
+        cursor: pointer;
+    background-color: #3c90fd;
+    transition: var(--transition);
+    }
+}
+
+.maps-embed {
+    display: none;
+    cursor: pointer;
+}
+
+.active {
+    display: block !important;
+    cursor: pointer;
+}
+
+/* contact page end */
