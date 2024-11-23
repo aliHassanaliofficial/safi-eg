@@ -21,6 +21,33 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </head>
 
+<style>
+    input[type=text] {
+        font-size: 1em;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: #f7f7f785;
+        color: #004d91;
+        border-inline-width: 1px;
+        border-style: solid;
+        border-width: 2px;
+        width: 100%;
+        background-color: #ececec66;
+        -webkit-transition: 0.5s;
+        transition: var(--transition);
+        background-repeat: no-repeat;
+        background-size: 18px;
+        background-position: 10px 50%;
+        padding-left: 25px;
+        box-shadow: 0 0 10px 2px #00000026;
+        &:focus {
+        border-color: #0c75ff;
+        outline-color: #0c75ff;
+        box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #fff;
+    }
+    }
+</style>
+
 <body>
     <div class="loader">
         <div class="pending">
@@ -46,12 +73,13 @@
                 <div class="blending-layer"></div>
                 <video autoplay loop contextmenu="0" preload="auto" playsinline muted
                     poster="https://app-safi.netlify.app/assets/static/51548415152.png">
-                    <source src="https://app-safi.netlify.app/assets/static/simulation_egypt_2156157781.mp4" type="video/mp4">
+                    <source src="https://app-safi.netlify.app/assets/static/simulation_egypt_2156157781.mp4"
+                        type="video/mp4">
                 </video>
             </div>
             <div class="simulation-layer">
                 <div class="communicate-box">
-                    <img src="./https://app-safi.netlify.app/assets/static/logo__white.png" alt="" class="logo">
+                    <img src="https://app-safi.netlify.app/assets/static/logo__white.png" alt="" class="logo">
                     <div class="welcome-text-area" id="onloadText">
                         <h1>We hope It was a wonderful time</h1>
                     </div>
@@ -91,8 +119,8 @@
                     <div id="videoRights">
                         &copy; video rights for
                         <a href="https://www.youtube.com/watch?v=1gIodSs7iI4"><img
-                                src="https://app-safi.netlify.app/assets/static/egypt-seeklogo.png" alt="Experience Egypt"
-                                title="Experience Egypt"></a>
+                                src="https://app-safi.netlify.app/assets/static/egypt-seeklogo.png"
+                                alt="Experience Egypt" title="Experience Egypt"></a>
                     </div>
                 </div>
             </div>
