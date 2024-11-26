@@ -40,11 +40,12 @@
         background-position: 10px 50% !important;
         padding-left: 25px !important;
         box-shadow: 0 0 10px 2px #00000026 !important;
+
         &:focus {
-        border-color: #0c75ff !important;
-        outline-color: #0c75ff !important;
-        box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #fff  !important;
-    }
+            border-color: #0c75ff !important;
+            outline-color: #0c75ff !important;
+            box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #fff !important;
+        }
     }
 </style>
 
@@ -83,9 +84,7 @@
                     <div class="welcome-text-area" id="onloadText">
                         <h1>We hope It was a wonderful time</h1>
                     </div>
-                    <form id="surveyForm" class="main-form timedOpacity" method="post"
-                        action="https://script.google.com/macros/s/AKfycbwBKaPlHm7T5ScgP7YrvT7_NojrIVuGYyrNPpHCLFDOQ2Rv_fsiG-Yx1I0D1I7MKAud/exec"
-                        onsubmit="return validateAndSubmit()">
+                    <form id="surveyForm" class="main-form timedOpacity" method="post" action="">
                         <input type="text" id="kernal_ID" name="kernal_ID" hidden value="">
                         <input type="hidden" id="currentQuestionIndex" value="0">
                         <div class="question-area special-area">
@@ -110,11 +109,6 @@
                             </div>
                         </div>
 
-
-
-
-
-
                     </form>
                     <div id="videoRights">
                         &copy; video rights for
@@ -136,7 +130,7 @@
                             Your feedback is invaluable to us to make your next experience better.
                         </h5>
                         <form class="main-form data-collect-form"
-                            action="https://script.google.com/macros/s/AKfycbzAeWGC_JgftSlbnVmvYnY2Aledzo57kHVGDO2Sn0DV22jPJQPGLNuB1FNHPbKbqiYl/exec"
+                            action="https://script.google.com/macros/s/AKfycbyIDMtY__-Z_LfWoGGAfI1iGfcg8zewG-Cc53WSGymaprDoxc_Dp79OL6ko5QMMwysx/exec"
                             method="post" onsubmit="return validateAndSubmit()">
                             <div class="question-area">
                                 <h2 class="question-title">
@@ -211,13 +205,8 @@
     </script>
 
     <script>
-        function assignKernalId() {
-            const kernalId = Math.random() * 10000;
-            document.getElementById("kernal_ID").value = kernalId;
-        }
-
         function validateAndSubmit() {
-            const kernalInput = document.getElementById("kernal_ID").value;
+            const kernalInput = document.getElementById("clientEmail").value;
             if (!kernalInput) {
                 assignKernalId();
             }
